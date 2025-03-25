@@ -9,7 +9,7 @@ var map = new ol.Map({
 });
 
 //initial view - epsg:3857 coordinates if not "Match project CRS"
-map.getView().fit([-8626085.658590, 4511042.933904, -8621261.661005, 4515197.217726], map.getSize());
+map.getView().fit([-8625769.207918, 4511042.683533, -8620943.221496, 4515198.680323], map.getSize());
 
 ////small screen definition
     var hasTouchScreen = map.getViewport().classList.contains('ol-touch');
@@ -433,15 +433,53 @@ var bottomRightContainerDiv = document.getElementById('bottom-right-container')
 var Title = new ol.control.Control({
     element: (() => {
         var titleElement = document.createElement('div');
-        titleElement.className = 'bottom-left-title ol-control';
+        titleElement.className = 'top-right-title ol-control';
         titleElement.innerHTML = '<h2 class="project-title">Kai Gray\'s 2024 Tech Expo</h2>';
         return titleElement;
     })(),
-    target: 'bottom-left-container'
+    target: 'top-right-container'
 });
 map.addControl(Title)
     
 //abstract
+
+var Abstract = new ol.control.Control({
+    element: (() => {
+        var titleElement = document.createElement('div');
+        titleElement.className = 'top-right-abstract ol-control';
+        titleElement.id = 'abstract';
+
+        var linkElement = document.createElement('a');
+
+        if (172 > 240) {
+            linkElement.setAttribute("onmouseenter", "showAbstract()");
+            linkElement.setAttribute("onmouseleave", "hideAbstract()");
+            linkElement.innerHTML = 'i';
+
+            window.hideAbstract = function() {
+                linkElement.classList.add("project-abstract");
+                linkElement.classList.remove("project-abstract-uncollapsed");
+                linkElement.innerHTML = 'i';
+            }
+
+            window.showAbstract = function() {
+                linkElement.classList.remove("project-abstract");
+                linkElement.classList.add("project-abstract-uncollapsed");
+                linkElement.innerHTML = '<img src="https://raw.githubusercontent.com/adamgray4204/JRPS/refs/heads/main/qgisWebMap/TechExpo/Kai_BikeDay.JPEG?crop:8:5,smart&quality=75&auto=webp&width=256" width=256>';
+            }
+
+            hideAbstract();
+        } else {
+            linkElement.classList.add("project-abstract-uncollapsed");
+            linkElement.innerHTML = '<img src="https://raw.githubusercontent.com/adamgray4204/JRPS/refs/heads/main/qgisWebMap/TechExpo/Kai_BikeDay.JPEG?crop:8:5,smart&quality=75&auto=webp&width=256" width=256>';
+        }
+
+        titleElement.appendChild(linkElement);
+        return titleElement;
+    })(),
+    target: 'top-right-container'
+});
+map.addControl(Abstract);
 
 
 //geolocate
