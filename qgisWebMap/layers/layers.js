@@ -41,11 +41,11 @@ var lyr_AdamMagnitude_2 = new ol.layer.Vector({
                 popuplayertitle: 'Adam Magnitude',
                 interactive: true,
     title: 'Adam Magnitude<br />\
-    <img src="styles/legend/AdamMagnitude_2_0.png" /> 0 - 1<br />\
-    <img src="styles/legend/AdamMagnitude_2_1.png" /> 1 - 2<br />\
-    <img src="styles/legend/AdamMagnitude_2_2.png" /> 2 - 3<br />\
-    <img src="styles/legend/AdamMagnitude_2_3.png" /> 3 - 4<br />\
-    <img src="styles/legend/AdamMagnitude_2_4.png" /> 4 - 5.05<br />' });
+    <img src="styles/legend/AdamMagnitude_2_0.png" /> 0 - 2.5<br />\
+    <img src="styles/legend/AdamMagnitude_2_1.png" /> 2.5 - 3.5<br />\
+    <img src="styles/legend/AdamMagnitude_2_2.png" /> 3.5 - 4<br />\
+    <img src="styles/legend/AdamMagnitude_2_3.png" /> 4 - 4.5<br />\
+    <img src="styles/legend/AdamMagnitude_2_4.png" /> 4.5 - 5.5<br />' });
 var format_TrailFeaturePts_3 = new ol.format.GeoJSON();
 var features_TrailFeaturePts_3 = format_TrailFeaturePts_3.readFeatures(json_TrailFeaturePts_3, 
             {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'});

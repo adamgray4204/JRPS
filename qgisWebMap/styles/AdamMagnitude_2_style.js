@@ -19,7 +19,7 @@ var style_AdamMagnitude_2 = function(feature, resolution){
     if ("" !== null) {
         labelText = String("");
     }
-    if (value >= 0.000000 && value <= 1.000000) {
+    if (value >= 0.000000 && value <= 2.500000) {
             style = [ new ol.style.Style({
         image: new ol.style.Circle({radius: 4.0 + size,
             displacement: [0, 0], stroke: new ol.style.Stroke({color: 'rgba(35,35,35,1.0)', lineDash: null, lineCap: 'butt', lineJoin: 'miter', width: 0.0}), fill: new ol.style.Fill({color: 'rgba(48,18,59,1.0)'})}),
@@ -27,7 +27,7 @@ var style_AdamMagnitude_2 = function(feature, resolution){
                               labelFill, placement, bufferColor,
                               bufferWidth)
     })]
-                    } else if (value >= 1.000000 && value <= 2.000000) {
+                    } else if (value >= 2.500000 && value <= 3.500000) {
             style = [ new ol.style.Style({
         image: new ol.style.Circle({radius: 4.0 + size,
             displacement: [0, 0], stroke: new ol.style.Stroke({color: 'rgba(35,35,35,1.0)', lineDash: null, lineCap: 'butt', lineJoin: 'miter', width: 0.0}), fill: new ol.style.Fill({color: 'rgba(40,188,235,1.0)'})}),
@@ -35,7 +35,7 @@ var style_AdamMagnitude_2 = function(feature, resolution){
                               labelFill, placement, bufferColor,
                               bufferWidth)
     })]
-                    } else if (value >= 2.000000 && value <= 3.000000) {
+                    } else if (value >= 3.500000 && value <= 4.000000) {
             style = [ new ol.style.Style({
         image: new ol.style.Circle({radius: 4.0 + size,
             displacement: [0, 0], stroke: new ol.style.Stroke({color: 'rgba(35,35,35,1.0)', lineDash: null, lineCap: 'butt', lineJoin: 'miter', width: 0.0}), fill: new ol.style.Fill({color: 'rgba(164,252,60,1.0)'})}),
@@ -43,7 +43,7 @@ var style_AdamMagnitude_2 = function(feature, resolution){
                               labelFill, placement, bufferColor,
                               bufferWidth)
     })]
-                    } else if (value >= 3.000000 && value <= 4.000000) {
+                    } else if (value >= 4.000000 && value <= 4.500000) {
             style = [ new ol.style.Style({
         image: new ol.style.Circle({radius: 4.0 + size,
             displacement: [0, 0], stroke: new ol.style.Stroke({color: 'rgba(35,35,35,1.0)', lineDash: null, lineCap: 'butt', lineJoin: 'miter', width: 0.0}), fill: new ol.style.Fill({color: 'rgba(251,126,33,1.0)'})}),
@@ -51,7 +51,7 @@ var style_AdamMagnitude_2 = function(feature, resolution){
                               labelFill, placement, bufferColor,
                               bufferWidth)
     })]
-                    } else if (value >= 4.000000 && value <= 5.054465) {
+                    } else if (value >= 4.500000 && value <= 5.500000) {
             style = [ new ol.style.Style({
         image: new ol.style.Circle({radius: 4.0 + size,
             displacement: [0, 0], stroke: new ol.style.Stroke({color: 'rgba(35,35,35,1.0)', lineDash: null, lineCap: 'butt', lineJoin: 'miter', width: 0.0}), fill: new ol.style.Fill({color: 'rgba(227,26,28,1.0)'})}),
