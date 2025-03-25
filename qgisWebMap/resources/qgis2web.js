@@ -9,7 +9,7 @@ var map = new ol.Map({
 });
 
 //initial view - epsg:3857 coordinates if not "Match project CRS"
-map.getView().fit([-8623389.604975, 4513154.227406, -8620974.049949, 4515234.645314], map.getSize());
+map.getView().fit([-8625769.207918, 4511042.683533, -8620943.221496, 4515198.680323], map.getSize());
 
 ////small screen definition
     var hasTouchScreen = map.getViewport().classList.contains('ol-touch');
@@ -430,6 +430,17 @@ var bottomRightContainerDiv = document.getElementById('bottom-right-container')
 
 //title
 
+var Title = new ol.control.Control({
+    element: (() => {
+        var titleElement = document.createElement('div');
+        titleElement.className = 'bottom-left-title ol-control';
+        titleElement.innerHTML = '<h2 class="project-title">Kai Gray\'s 2024 Tech Expo</h2>';
+        return titleElement;
+    })(),
+    target: 'bottom-left-container'
+});
+map.addControl(Title)
+    
 //abstract
 
 
