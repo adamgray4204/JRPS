@@ -9,7 +9,7 @@ var map = new ol.Map({
 });
 
 //initial view - epsg:3857 coordinates if not "Match project CRS"
-map.getView().fit([-8625769.419917, 4511042.339084, -8620943.185951, 4515198.548958], map.getSize());
+map.getView().fit([-8625743.231050, 4510990.455857, -8620916.997085, 4515146.645131], map.getSize());
 
 ////small screen definition
     var hasTouchScreen = map.getViewport().classList.contains('ol-touch');
@@ -434,7 +434,7 @@ var Title = new ol.control.Control({
     element: (() => {
         var titleElement = document.createElement('div');
         titleElement.className = 'top-right-title ol-control';
-        titleElement.innerHTML = '<h2 class="project-title">Kai Gray\'s 2025 Tech Expo</h2>';
+        titleElement.innerHTML = '<h2 class="project-title">ARGS Tech Expo 2025</h2>';
         return titleElement;
     })(),
     target: 'top-right-container'
@@ -451,7 +451,7 @@ var Abstract = new ol.control.Control({
 
         var linkElement = document.createElement('a');
 
-        if (172 > 240) {
+        if (240 > 240) {
             linkElement.setAttribute("onmouseenter", "showAbstract()");
             linkElement.setAttribute("onmouseleave", "hideAbstract()");
             linkElement.innerHTML = 'i';
@@ -465,13 +465,13 @@ var Abstract = new ol.control.Control({
             window.showAbstract = function() {
                 linkElement.classList.remove("project-abstract");
                 linkElement.classList.add("project-abstract-uncollapsed");
-                linkElement.innerHTML = '<img src="https://raw.githubusercontent.com/adamgray4204/JRPS/refs/heads/main/qgisWebMap/TechExpo/Kai_BikeDay.JPEG?crop:8:5,smart&quality=75&auto=webp&width=256" width=256>';
+                linkElement.innerHTML = '<strong>Mountain Biking Trail <br />Difficulty Detection <br />Through GIS Analysis</strong><br />By: Kai Gray<br /><img src="https://raw.githubusercontent.com/adamgray4204/JRPS/refs/heads/main/qgisWebMap/TechExpo/Kai_BikeDay.JPEG?crop:8:5,smart&quality=75&auto=webp&width=256" width=256>';
             }
 
             hideAbstract();
         } else {
             linkElement.classList.add("project-abstract-uncollapsed");
-            linkElement.innerHTML = '<img src="https://raw.githubusercontent.com/adamgray4204/JRPS/refs/heads/main/qgisWebMap/TechExpo/Kai_BikeDay.JPEG?crop:8:5,smart&quality=75&auto=webp&width=256" width=256>';
+            linkElement.innerHTML = '<strong>Mountain Biking Trail <br />Difficulty Detection <br />Through GIS Analysis</strong><br />By: Kai Gray<br /><img src="https://raw.githubusercontent.com/adamgray4204/JRPS/refs/heads/main/qgisWebMap/TechExpo/Kai_BikeDay.JPEG?crop:8:5,smart&quality=75&auto=webp&width=256" width=256>';
         }
 
         titleElement.appendChild(linkElement);
