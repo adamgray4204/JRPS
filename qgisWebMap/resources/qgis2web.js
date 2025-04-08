@@ -482,6 +482,45 @@ var Abstract = new ol.control.Control({
 map.addControl(Abstract);
 
 
+var Zoom = new ol.control.Control({
+    element: (() => {
+        var titleElement = document.createElement('div');
+        titleElement.className = 'top-right-abstract ol-control';
+        titleElement.id = 'zoomButton';
+
+        var linkElement = document.createElement('a');
+
+        if (260 > 240) {
+            linkElement.setAttribute("onclick", "setView()");
+            //linkElement.setAttribute("onmouseleave", "hideAbstract()");
+			linkElement.classList.add("project-abstract");
+			linkElement.classList.remove("project-abstract-uncollapsed");
+            linkElement.innerHTML = 'Z';
+
+            //window.hideAbstract = function() {
+            //    linkElement.classList.add("project-abstract");
+            //    linkElement.classList.remove("project-abstract-uncollapsed");
+            //    linkElement.innerHTML = 'i';
+            //}
+
+            window.setView = function() {
+			//initial view - epsg:3857 coordinates if not "Match project CRS"
+			map.getView().fit([-8625768.570617, 4511445.911939, -8620942.336651, 4514709.143072], map.getSize());
+            }
+
+            //hideAbstract();
+        } else {
+            linkElement.classList.add("project-abstract-uncollapsed");
+            linkElement.innerHTML = '<strong>Mountain Biking Trail <br />Difficulty Detection <br />Through GIS Analysis</strong><br />By: Kai Gray<br /><img src="https://raw.githubusercontent.com/adamgray4204/JRPS/refs/heads/main/qgisWebMap/TechExpo/Kai_BikeDay.JPEG?crop:8:5,smart&quality=75&auto=webp&width=256" width=256>';
+        }
+
+        titleElement.appendChild(linkElement);
+        return titleElement;
+    })(),
+    target: 'top-right-container'
+});
+map.addControl(Zoom);
+
 //geolocate
 
 
